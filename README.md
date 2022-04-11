@@ -1,57 +1,38 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Object Oriented Programming School Library
 
-> Description the project.
-
+> A school library app that records the available books and who borrows them.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
+- Ruby
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-
+You must have Ruby installed on your computer.
 ### Setup
+Clone this repository using `git clone https://github.com/melaniesigrid/oop_school-library.git`
 
-### Install
+### Navigate to the correct folder
+On your terminal, run: `cd oop_school-library`.
 
-### Usage
-
-### Run tests
-
-### Deployment
-
+### To run the code
+On your terminal, run: `ruby person.rb`.
 
 
-## Authors
 
-👤 **Author1**
+## Author
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Melanie Sigrid**
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
+- GitHub: [@melaniesigrid](https://github.com/melaniesigrid)
+- Twitter: [@SiriMoon11](https://twitter.com/SiriMoon11)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/melaniesigrid/)
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -64,9 +45,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Hat tip to all my partners and code reviewers at Microverse.
 
 ## 📝 License
 
