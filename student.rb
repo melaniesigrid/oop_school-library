@@ -1,8 +1,9 @@
 class Student < Person
-  def initialize (classroom, name = "Unknown", age = "true", parent_permission)
-    super(age, paren_permission, name)
+  def initialize(classroom, parent_permission, name = 'Unknown', age = true)
+    super(age, parent_permission, name)
     @classroom = classroom
   end
+
   def play_hooky
     "¯\(ツ)/¯"
   end
