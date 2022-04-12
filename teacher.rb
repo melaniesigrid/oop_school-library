@@ -1,4 +1,4 @@
-class Teacher < person
+class Teacher < Person
   def initialize(specialization, parent_permission: true, name = 'Unknown', age: true)
     super(age, parent_permission, name)
     @specialization = specialization
