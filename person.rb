@@ -6,7 +6,9 @@ class Person
     @parent_permission = parent_permission
   end
 
+  # rubocop:disable Naming/PredicateName
   def is_of_age?
+  # rubocop:enable Naming/PredicateName
     age >= 18
   end
 
