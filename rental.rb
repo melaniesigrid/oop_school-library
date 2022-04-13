@@ -15,4 +15,5 @@ class Rental
   def person=(person)
     @person = person
     person.rentals.push(self) unless person.rentals.include?(self)
+  end
 end
