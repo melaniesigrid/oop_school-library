@@ -30,7 +30,6 @@ class Person < Nameable
   private :is_of_age?
 end
 
-
 person = Person.new(22, 'maximilianus')
 person.correct_name
 capitalized_person = CapitalizeDecorator.new(person)
