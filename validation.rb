@@ -4,7 +4,7 @@ module Validation
     loop do
       print message
       input = gets.chomp.strip.to_i
-      if input.is_a?(Integer) && input.positive? 0
+      if input.is_a?(Integer) && input.positive?
         number = input
         break
       else
