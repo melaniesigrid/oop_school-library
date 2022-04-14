@@ -5,7 +5,7 @@ require_relative 'rental'
 require_relative 'validation'
 
 class App
-include Validation
+  include Validation
 
   def initialize
     @people = []
@@ -83,14 +83,14 @@ include Validation
     if @people == []
       puts 'No people added yet.'
     end
-    @people.each_with_index {|person, index| puts "#{index + 1}) [#{person.class.name}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"}
+    @people.each_with_index { |person, index| puts "#{index + 1}) [#{person.class.name}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
   end
 
   def list_books
     if @books == []
       puts 'No books added yet.'
     end
-    @books.each_with_index {|book, index| puts "#{index + 1}) Title: #{book.title}, Author: #{book.author}"}
+    @books.each_with_index { |book, index| puts "#{index + 1}) Title: #{book.title}, Author: #{book.author}" }
   end
 
   def create_rental
@@ -110,7 +110,7 @@ include Validation
     list_people
     print 'ID of person: '
     id = gets.chomp.strip.to_i
-    person_selected = @people.select{|person| person.id == id}[0]
-    person_selected.rentals.each {|rental| puts "Date: #{rental.date}, Book \"#{rental.book.title}\", by #{rental.book.author}"}
+    person_selected = @people.select{ |person| person.id == id }[0]
+    person_selected.rentals.each { |rental| puts "Date: #{rental.date}, Book \"#{rental.book.title}\", by #{rental.book.author}" }
   end
 end

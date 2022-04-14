@@ -4,11 +4,11 @@ module Validation
     loop do
       print message
       input = gets.chomp.strip.to_i
-      if input.is_a?(Integer) && input > 0
+      if input.is_a?(Integer) && input.positive? 0
         number = input
         break
       else
-        puts "Please enter a valid number"
+        puts 'Please enter a valid number'
       end
     end
     number
@@ -23,10 +23,9 @@ module Validation
         number = input
         break
       else
-        puts "Please enter a valid number"
+        puts 'Please enter a valid number'
       end
     end
     number
   end
-
 end
