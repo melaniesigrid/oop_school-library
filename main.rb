@@ -1,7 +1,7 @@
-# rubocop:disable Lint/ScriptPermission
+# rubocop:disable
 #!/usr/bin/env ruby
 require_relative 'app'
-# rubocop:enable Lint/ScriptPermission
+# rubocop:enable
 
 class Main
   def display_choices
