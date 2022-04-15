@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 require_relative 'app'
 
-
 class Main
   def display_choices
     puts
