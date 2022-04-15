@@ -2,7 +2,6 @@
 require_relative 'app'
 
 class Main
-
   def display_choices
     puts
     puts 'Please choose an option by entering a number:'

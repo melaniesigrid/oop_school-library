@@ -16,36 +16,36 @@ class App
   def select_choice
     choice = validate_options('', (1...9))
     case choice
-      when 1, 2, 6
-        list_tasks(choice)
-      when 3, 4, 5
-        create_tasks(choice)
-      when 7
-        'Exit'
-      else
-        puts 'Unknown option, please select from the options menu.'
+    when 1, 2, 6
+      list_tasks(choice)
+    when 3, 4, 5
+      create_tasks(choice)
+    when 7
+      'Exit'
+    else
+      puts 'Unknown option, please select from the options menu.'
     end
   end
 
   def list_tasks(choice)
     case choice
-      when 1
-        list_books
-      when 2
-        list_people
-      when 6
-        list_rentals
+    when 1
+      list_books
+    when 2
+      list_people
+    when 6
+      list_rentals
     end
   end
 
   def create_tasks(choice)
     case choice
-      when 3
-        create_person
-      when 4
-        create_book
-      when 5
-        create_rental
+    when 3
+      create_person
+    when 4
+      create_book
+    when 5
+      create_rental
     end
   end
 
@@ -57,10 +57,10 @@ class App
     name = gets.chomp.strip
 
     case choice
-      when 1
-        create_student(name, age)
-      when 2
-        create_teacher(name, age)
+    when 1
+      create_student(name, age)
+    when 2
+      create_teacher(name, age)
     end
     puts 'Person created successfully'
   end
@@ -130,7 +130,7 @@ class App
     id = gets.chomp.strip.to_i
     person_selected = @people.select{ |person| person.id == id }[0]
     person_selected.rentals.each {
-      |rental| puts "Date: #{ rental.date }, Book \"#{ rental.book.title }\", by #{ rental.book.author }"
+      |rental| puts "Date: #{ rental.date }, Book \"#{rental.book.title}\", by #{rental.book.author}"
     }
   end
 end
