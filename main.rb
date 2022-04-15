@@ -22,7 +22,7 @@ class Main
       display_choices
       selection = app.select_choice
     end
-    puts 'Thank you for using the School Library App!'
+    puts 'Thank you for using the School Library App! ✨'
   end
 end
 
