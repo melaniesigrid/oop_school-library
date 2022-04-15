@@ -2,6 +2,8 @@
 
 require_relative 'app'
 
+require 'pry'
+
 class Main
   def display_choices
     puts
