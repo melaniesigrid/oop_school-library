@@ -1,6 +1,6 @@
-# rubocop:disable Lint/ScriptPermission
+# rubocop:disable Lint/ScriptPermission Layout/LeadingCommentSpace
 #!/usr/bin/env ruby
-# rubocop enable Lint/ScriptPermission
+# rubocop:enable Lint/ScriptPermission Layout/LeadingCommentSpace
 require_relative 'app'
 
 class Main
