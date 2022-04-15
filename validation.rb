@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module Validation
   def validate_number(message)
     number = 0

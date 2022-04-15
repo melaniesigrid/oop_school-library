@@ -1,8 +1,3 @@
-# frozen_string_literal: true
-
-require 'rubygems'
-require 'bundler/setup'
-
 # !/usr/bin/env ruby
 
 require_relative 'app'
