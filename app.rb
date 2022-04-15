@@ -95,11 +95,15 @@ class App
   end
 
   def list_people
-    @people.each_with_index { |person, index| puts "#{index + 1}) [#{person.class.name}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
+    @people.each_with_index do |person, index|
+      puts "#{index + 1}) [#{person.class.name}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+    end
   end
 
   def list_books
-    @books.each_with_index { |book, index| puts "#{index + 1}) Title: #{book.title}, Author: #{book.author}" }
+    @books.each_with_index do |book, index|
+      puts "#{index + 1}) Title: #{book.title}, Author: #{book.author}"
+    end
   end
 
   def create_rental
@@ -119,7 +123,9 @@ class App
     list_people
     print 'ID of person: '
     id = gets.chomp.strip.to_i
-    person_selected = @people.select{ |person| person.id == id }[0]
-    person_selected.rentals.each { |rental| puts "Date: #{rental.date}, Book \"#{rental.book.title}\", by #{rental.book.author}" }
+    person_selected = @people.select { |person| person.id == id }[0]
+    person_selected.rentals.each do |rental|
+      puts "Date: #{rental.date}, Book \"#{rental.book.title}\", by #{rental.book.author}"
+    end
   end
 end
