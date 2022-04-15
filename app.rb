@@ -16,20 +16,20 @@ class App
   def select_choice
     choice = validate_options('', (1...9))
     case choice
-    when 1
-      list_books
-    when 2
-      list_people
-    when 3
-      create_person
-    when 4
-      create_book
-    when 5
-      create_rental
-    when 6
-      list_rentals
-    when 7
-      'Exit'
+      when 1
+        list_books
+      when 2
+        list_people
+      when 3
+        create_person
+      when 4
+        create_book
+      when 5
+        create_rental
+      when 6
+        list_rentals
+      when 7
+        'Exit'
     else
       puts 'Unknown option, try again'
     end
@@ -53,10 +53,11 @@ class App
 
   def create_student(name, age)
     print 'Has parent permission? [Y/N]: '
-    parent_permission = gets.chomp.strip
-    if parent_permission.upcase == 'Y'
-      parent_permission = true
-    elsif parent_permission.upcase == 'N'
+    parent_permission = gets.chomp.strip.upcase
+    case parent_permission
+      when 'Y'
+        parent_permission = true
+      when 'N'
       parent_permission = false
     end
     @people << Student.new(age, name: name, parent_permission: parent_permission)
@@ -83,14 +84,18 @@ class App
     if @people == []
       puts 'No people added yet.'
     end
-    @people.each_with_index { |person, index| puts "#{index + 1}) [#{person.class.name}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
+    @people.each_with_index {
+      |person, index| puts "#{index + 1}) [#{person.class.name}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+    }
   end
 
   def list_books
-    if @books == []
+    @books == []
       puts 'No books added yet.'
     end
-    @books.each_with_index { |book, index| puts "#{index + 1}) Title: #{book.title}, Author: #{book.author}" }
+    @books.each_with_index {
+      |book, index| puts "#{index + 1}) Title: #{book.title}, Author: #{book.author}"
+    }
   end
 
   def create_rental
@@ -102,7 +107,7 @@ class App
     person_index = gets.chomp.strip.to_i
     puts 'Date [YYYY/MM/DD]: '
     date = gets.chomp.strip
-    @rentals << Rental.new(@books[book_index -1], @people[person_index -1], date)
+    @rentals << Rental.new(@books[book_index - 1], @people[person_index - 1], date)
     puts 'Rental created successfully.'
   end
 
@@ -111,6 +116,8 @@ class App
     print 'ID of person: '
     id = gets.chomp.strip.to_i
     person_selected = @people.select{ |person| person.id == id }[0]
-    person_selected.rentals.each { |rental| puts "Date: #{rental.date}, Book \"#{rental.book.title}\", by #{rental.book.author}" }
+    person_selected.rentals.each {
+      |rental| puts "Date: #{ rental.date }, Book \"#{ rental.book.title }\", by #{ rental.book.author }"
+    }
   end
 end
