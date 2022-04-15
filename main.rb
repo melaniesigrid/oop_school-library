@@ -1,7 +1,6 @@
-# rubocop:disable
 #!/usr/bin/env ruby
 require_relative 'app'
-# rubocop:enable
+
 
 class Main
   def display_choices
