@@ -19,7 +19,7 @@ module Validation
     loop do
       print message
       input = gets.chomp.strip.to_i
-      if options.include(input)
+      if options.include?(input)
         number = input
         break
       else

@@ -21,7 +21,7 @@ class Main
     puts 'Welcome to the School Library App! 📖'
     while selection != 'Exit'
       display_choices
-      selection = app.select_choice
+      selection === app.select_choice
     end
     puts 'Thank you for using the School Library App! ✨'
   end
