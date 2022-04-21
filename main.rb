@@ -1,6 +1,5 @@
 # !/usr/bin/env ruby
-
-require_relative 'app'
+require_relative './app/app.rb'
 
 class Main
   def display_choices
@@ -21,7 +20,7 @@ class Main
     puts 'Welcome to the School Library App! 📖'
     while selection != 'Exit'
       display_choices
-      selection === app.select_choice
+      selection = app.select_choice
     end
     puts 'Thank you for using the School Library App! ✨'
   end
