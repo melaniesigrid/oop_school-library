@@ -33,6 +33,7 @@ On your terminal, run: `ruby person.rb`.
 - GitHub: [@melaniesigrid](https://github.com/melaniesigrid)
 - Twitter: [@SiriMoon11](https://twitter.com/SiriMoon11)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/melaniesigrid/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
